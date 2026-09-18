@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>StreetCare | Street Fault Reporting Automation System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-road"></i>
+
+<h2>StreetCare</h2>
+
+</div>
+
+<ul>
+
+<li><a href="index.html" class="active">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="report.html">Report Issue</a></li>
+
+<li><a href="track.html">Track</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login</a></li>
+
+<li><a href="register.html" class="btn">Register</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ===================== HERO SECTION ===================== -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+Report Street Problems<br>
+
+Build a Better Mumbai
+
+</h1>
+
+<p>
+
+StreetCare is a smart web platform that allows citizens
+to report potholes, broken street lights, garbage,
+water leakage, drainage issues and other civic
+problems directly from one place.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="report.html" class="primary-btn">
+
+<i class="fa-solid fa-plus"></i>
+
+Report Issue
+
+</a>
+
+<a href="about.html" class="secondary-btn">
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/hero/city.png"
+alt="Smart City">
+
+</div>
+
+</section>
+
+<!-- ===================== HERO CARDS ===================== -->
+
+<section class="hero-cards">
+
+<div class="card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Easy Reporting</h3>
+
+<p>
+
+Submit street issues with location,
+description and images.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Live Tracking</h3>
+
+<p>
+
+Track complaint status anytime.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-building"></i>
+
+<h3>Smart Dashboard</h3>
+
+<p>
+
+Authorities can manage complaints
+efficiently.
+
+</p>
+
+</div>
+
+</section>
+<!-- ===================== STATISTICS SECTION ===================== -->
+
+<section class="stats">
+
+    <div class="section-title">
+
+        <h2>Impact in Numbers</h2>
+
+        <p>
+            Our goal is to improve urban infrastructure through faster complaint reporting and resolution.
+        </p>
+
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-box">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <h2>500+</h2>
+
+            <p>Complaints Submitted</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2>380+</h2>
+
+            <p>Resolved Complaints</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <i class="fa-solid fa-spinner"></i>
+
+            <h2>95+</h2>
+
+            <p>In Progress</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h2>24</h2>
+
+            <p>Mumbai Areas Covered</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== ISSUE CATEGORIES ===================== -->
+
+<section class="categories">
+
+    <div class="section-title">
+
+        <h2>Report Street Issues</h2>
+
+        <p>
+            Select the category that best matches the problem you want to report.
+        </p>
+
+    </div>
+
+    <div class="category-container">
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-road"></i>
+
+            <h3>Potholes</h3>
+
+            <p>
+                Report damaged roads and potholes affecting traffic and public safety.
+            </p>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>Street Lights</h3>
+
+            <p>
+                Report non-functioning or damaged street lights in your area.
+            </p>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-trash"></i>
+
+            <h3>Garbage</h3>
+
+            <p>
+                Report overflowing garbage bins and unclean public spaces.
+            </p>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-faucet-drip"></i>
+
+            <h3>Water Leakage</h3>
+
+            <p>
+                Report leaking pipelines and water wastage in public places.
+            </p>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-water"></i>
+
+            <h3>Drainage</h3>
+
+            <p>
+                Report blocked drains and waterlogging problems.
+            </p>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-traffic-light"></i>
+
+            <h3>Traffic Signals</h3>
+
+            <p>
+                Report damaged or non-working traffic signals causing inconvenience.
+            </p>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-tree"></i>
+
+            <h3>Fallen Trees</h3>
+
+            <p>
+                Report fallen trees or branches blocking roads or footpaths.
+            </p>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <h3>Other Issues</h3>
+
+            <p>
+                Report any other public infrastructure issue that requires attention.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+
+<section class="why-us">
+
+    <div class="section-title">
+
+        <h2>Why Choose StreetCare?</h2>
+
+    </div>
+
+    <div class="why-container">
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            <h3>Easy to Use</h3>
+
+            <p>
+                A simple and user-friendly interface for quick complaint registration.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Quick Tracking</h3>
+
+            <p>
+                Monitor the status of your complaint anytime with a unique complaint ID.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Secure System</h3>
+
+            <p>
+                User information and complaint details are stored securely.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Citizen Participation</h3>
+
+            <p>
+                Encourage active participation in maintaining safer and cleaner streets.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================== HOW IT WORKS ===================== -->
+
+<section class="how-it-works">
+
+    <div class="section-title">
+
+        <h2>How It Works</h2>
+
+        <p>
+            Reporting a street issue is quick and easy. Follow these four simple steps.
+        </p>
+
+    </div>
+
+    <div class="steps-container">
+
+        <div class="step-card">
+
+            <div class="step-number">1</div>
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <h3>Register</h3>
+
+            <p>
+                Create your account or log in to access the complaint portal.
+            </p>
+
+        </div>
+
+        <div class="step-card">
+
+            <div class="step-number">2</div>
+
+            <i class="fa-solid fa-camera"></i>
+
+            <h3>Report Issue</h3>
+
+            <p>
+                Upload a photo, choose the issue category and enter the location.
+            </p>
+
+        </div>
+
+        <div class="step-card">
+
+            <div class="step-number">3</div>
+
+            <i class="fa-solid fa-magnifying-glass-location"></i>
+
+            <h3>Verification</h3>
+
+            <p>
+                The complaint is reviewed by the administrator before processing.
+            </p>
+
+        </div>
+
+        <div class="step-card">
+
+            <div class="step-number">4</div>
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Resolution</h3>
+
+            <p>
+                Track your complaint until the issue is marked as resolved.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== RECENT COMPLAINTS ===================== -->
+
+<section class="recent-complaints">
+
+    <div class="section-title">
+
+        <h2>Recent Reported Issues</h2>
+
+        <p>
+            Sample complaints reported from different areas of Mumbai.
+        </p>
+
+    </div>
+
+    <table class="complaint-table">
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Location</th>
+
+                <th>Category</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>SFR001</td>
+
+                <td>Andheri East</td>
+
+                <td>Pothole</td>
+
+                <td><span class="resolved">Resolved</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>SFR002</td>
+
+                <td>Dadar</td>
+
+                <td>Street Light</td>
+
+                <td><span class="progress">In Progress</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>SFR003</td>
+
+                <td>Kurla</td>
+
+                <td>Garbage</td>
+
+                <td><span class="pending">Pending</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>SFR004</td>
+
+                <td>Bandra West</td>
+
+                <td>Water Leakage</td>
+
+                <td><span class="resolved">Resolved</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>SFR005</td>
+
+                <td>Ghatkopar</td>
+
+                <td>Drainage</td>
+
+                <td><span class="progress">In Progress</span></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- ===================== CALL TO ACTION ===================== -->
+
+<section class="cta">
+
+    <div class="cta-content">
+
+        <h2>Help Make Mumbai Better</h2>
+
+        <p>
+
+            Your report can help improve roads, public safety and city infrastructure.
+
+        </p>
+
+        <a href="report.html" class="primary-btn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+            Report an Issue
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ===================== MUMBAI EMERGENCY CONTACTS ===================== -->
+
+<section class="emergency">
+
+    <div class="section-title">
+
+        <h2>Important Mumbai Contacts</h2>
+
+        <p>
+            Official emergency and civic helpline numbers for quick assistance.
+        </p>
+
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-phone-volume"></i>
+
+            <h3>Emergency</h3>
+
+            <h4>112</h4>
+
+            <p>National Emergency Helpline</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-building"></i>
+
+            <h3>BMC Helpline</h3>
+
+            <h4>1916</h4>
+
+            <p>Municipal Complaint Helpline</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Mumbai Police</h3>
+
+            <h4>100</h4>
+
+            <p>Police Emergency</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-truck-medical"></i>
+
+            <h3>Ambulance</h3>
+
+            <h4>108</h4>
+
+            <p>Medical Emergency Service</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== FAQ SECTION ===================== -->
+
+<section class="faq">
+
+    <div class="section-title">
+
+        <h2>Frequently Asked Questions</h2>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <h3>Who can report a street issue?</h3>
+
+            <p>
+                Any citizen can register and report civic issues through this platform.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Can I upload a photo?</h3>
+
+            <p>
+                Yes. Images help authorities identify the issue more accurately.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Can I track my complaint?</h3>
+
+            <p>
+                Yes. Every complaint receives a unique Complaint ID for tracking.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Is registration required?</h3>
+
+            <p>
+                Yes. Users must create an account before submitting complaints.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>StreetCare</h2>
+
+            <p>
+
+                StreetCare is a smart civic reporting platform that enables
+                citizens to report street-related issues quickly and efficiently,
+                helping build safer and smarter cities.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="report.html">Report Issue</a></li>
+
+                <li><a href="track.html">Track Complaint</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                support@streetcare.in
+
+            </p>
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 98765 43210
+
+            </p>
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Mumbai, Maharashtra, India
+
+            </p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+
+        <p>
+
+            © 2026 StreetCare | Street Fault Reporting Automation System.
+            Developed by Sajili Chavan & Team.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

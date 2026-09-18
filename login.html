@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | StreetCare</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-road"></i>
+
+                <h2>StreetCare</h2>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="report.html">Report Issue</a>
+                </li>
+
+                <li>
+                    <a href="track.html">Track</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="active">Login</a>
+                </li>
+
+                <li>
+                    <a href="register.html" class="btn">Register</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ===================== LOGIN SECTION ===================== -->
+
+    <section class="login-section">
+
+        <div class="login-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="login-info">
+
+                <i class="fa-solid fa-road login-icon"></i>
+
+                <h1>Welcome Back!</h1>
+
+                <p>
+                    Login to your StreetCare account to report
+                    street issues and track your complaints.
+                </p>
+
+                <div class="login-features">
+
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Easy complaint reporting
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Track your complaints
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Manage your profile
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="login-box">
+
+                <div class="login-heading">
+
+                    <h2>Login</h2>
+
+                    <p>
+                        Access your StreetCare account
+                    </p>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+
+                <form id="loginForm">
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <i
+                                class="fa-solid fa-eye password-toggle"
+                                id="togglePassword">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="login-options">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                            >
+
+                            Remember me
+
+                        </label>
+
+                        <a href="#">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-submit"
+                    >
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Login
+
+                    </button>
+
+
+                    <!-- MESSAGE -->
+
+                    <p
+                        id="loginMessage"
+                        class="login-message">
+                    </p>
+
+                </form>
+
+
+                <!-- REGISTER LINK -->
+
+                <div class="register-link">
+
+                    <p>
+
+                        Don't have an account?
+
+                        <a href="register.html">
+                            Create Account
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== FOOTER ===================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+
+                <h2>StreetCare</h2>
+
+                <p>
+
+                    StreetCare is a proposed civic reporting
+                    platform for identifying and tracking
+                    street-related infrastructure issues.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">Report Issue</a>
+                    </li>
+
+                    <li>
+                        <a href="track.html">Track</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    support@streetcare.in
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Mumbai, Maharashtra, India
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 StreetCare | Street Fault Reporting Automation System.
+                Developed by Sajili Chavan & Team.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Login JavaScript -->
+
+    <script>
+
+        /* ============================
+           SHOW / HIDE PASSWORD
+        ============================ */
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        const password =
+            document.getElementById("password");
+
+
+        togglePassword.addEventListener("click", function () {
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                this.classList.remove("fa-eye");
+
+                this.classList.add("fa-eye-slash");
+
+            } else {
+
+                password.type = "password";
+
+                this.classList.remove("fa-eye-slash");
+
+                this.classList.add("fa-eye");
+
+            }
+
+        });
+
+
+        /* ============================
+           FRONTEND LOGIN DEMO
+        ============================ */
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+        const loginMessage =
+            document.getElementById("loginMessage");
+
+
+        loginForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const passwordValue =
+                document.getElementById("password").value.trim();
+
+
+            if (email === "" || passwordValue === "") {
+
+                loginMessage.textContent =
+                    "Please enter email and password.";
+
+                return;
+
+            }
+
+
+            /*
+                BACKEND CONNECTION WILL BE ADDED LATER.
+
+                For now this only demonstrates
+                frontend form validation.
+            */
+
+            loginMessage.textContent =
+                "Login form submitted successfully.";
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

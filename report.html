@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Report a Street Problem | StreetCare</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f7f6;
+        color: #222;
+    }
+
+    /* Navigation */
+    nav {
+        background: #0b6b50;
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 15px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Header */
+    .page-header {
+        background: linear-gradient(135deg, #0b6b50, #15956f);
+        color: white;
+        text-align: center;
+        padding: 55px 20px;
+    }
+
+    .page-header h1 {
+        font-size: 38px;
+        margin-bottom: 12px;
+    }
+
+    .page-header p {
+        font-size: 17px;
+    }
+
+    /* Form container */
+    .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 40px auto;
+    }
+
+    .form-card {
+        background: white;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-card h2 {
+        color: #0b6b50;
+        margin-bottom: 10px;
+    }
+
+    .form-card .intro {
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    /* Form */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 13px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+        outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #0b6b50;
+    }
+
+    textarea {
+        min-height: 130px;
+        resize: vertical;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background: #0b6b50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .submit-btn:hover {
+        background: #09543f;
+    }
+
+    .submit-btn:disabled {
+        background: #999;
+        cursor: not-allowed;
+    }
+
+    /* Message */
+    #message {
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 8px;
+        display: none;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .success {
+        display: block !important;
+        background: #d9f5e9;
+        color: #087443;
+    }
+
+    .error {
+        display: block !important;
+        background: #ffe0e0;
+        color: #b00020;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 50px;
+        background: #12352d;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        nav a {
+            margin: 0 8px;
+        }
+
+        .page-header h1 {
+            font-size: 30px;
+        }
+
+        .form-card {
+            padding: 22px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Navigation -->
+<nav>
+    <div class="logo">StreetCare</div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="report.html">Report</a>
+    </div>
+</nav>
+
+
+<!-- Page Header -->
+<section class="page-header">
+    <h1>Report a Street Problem</h1>
+    <p>Help us identify and improve problems in Mumbai's streets.</p>
+</section>
+
+
+<!-- Report Form -->
+<div class="container">
+
+    <div class="form-card">
+
+        <h2>Submit Your Report</h2>
+
+        <p class="intro">
+            Provide the details below so the issue can be recorded
+            and reviewed.
+        </p>
+
+        <form id="reportForm">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+
+            <!-- Issue Type -->
+            <div class="form-group">
+                <label for="issueType">Issue Type</label>
+
+                <select id="issueType" name="issueType" required>
+
+                    <option value="">Select an issue</option>
+
+                    <option value="Pothole">
+                        Pothole
+                    </option>
+
+                    <option value="Road Damage">
+                        Road Damage
+                    </option>
+
+                    <option value="Streetlight">
+                        Streetlight Problem
+                    </option>
+
+                    <option value="Garbage">
+                        Garbage / Waste
+                    </option>
+
+                    <option value="Water Leakage">
+                        Water Leakage
+                    </option>
+
+                    <option value="Drainage">
+                        Drainage Problem
+                    </option>
+
+                    <option value="Footpath">
+                        Footpath Problem
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+            </div>
+
+
+            <!-- Location -->
+            <div class="form-group">
+                <label for="location">Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="Example: Andheri West, Mumbai"
+                    required
+                >
+            </div>
+
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Describe the Problem</label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Explain the problem clearly..."
+                    required
+                ></textarea>
+            </div>
+
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="submit-btn"
+                id="submitBtn"
+            >
+                Submit Report
+            </button>
+
+        </form>
+
+
+        <!-- Status Message -->
+        <div id="message"></div>
+
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 StreetCare | Improving Mumbai Together</p>
+</footer>
+
+
+<!-- Backend Connection -->
+<script>
+
+    const reportForm = document.getElementById("reportForm");
+    const message = document.getElementById("message");
+    const submitBtn = document.getElementById("submitBtn");
+
+
+    reportForm.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+        // Get form values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const issueType = document.getElementById("issueType").value;
+        const location = document.getElementById("location").value.trim();
+        const description = document.getElementById("description").value.trim();
+
+
+        // Prepare data
+        const reportData = {
+            name: name,
+            email: email,
+            issueType: issueType,
+            location: location,
+            description: description
+        };
+
+
+        // Disable button while submitting
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+
+        try {
+
+            const response = await fetch(
+                "http://localhost:5000/api/reports",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify(reportData)
+                }
+            );
+
+
+            const data = await response.json();
+
+
+            if (response.ok) {
+
+                message.textContent =
+                    "✓ Report submitted successfully! Thank you for helping improve Mumbai.";
+
+                message.className = "success";
+
+                reportForm.reset();
+
+            } else {
+
+                message.textContent =
+                    "Failed to submit report: " +
+                    (data.message || "Please try again.");
+
+                message.className = "error";
+            }
+
+
+        } catch (error) {
+
+            console.error("Connection error:", error);
+
+            message.textContent =
+                "Unable to connect to StreetCare server. Please make sure the backend is running.";
+
+            message.className = "error";
+
+        }
+
+
+        // Enable button again
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Report";
+
+    });
+
+</script>
+```
+
+</body>
+</html>

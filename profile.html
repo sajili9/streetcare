@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | StreetCare</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-road"></i>
+
+                <h2>StreetCare</h2>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="report.html">
+                        Report Issue
+                    </a>
+                </li>
+
+                <li>
+                    <a href="track.html">
+                        Track
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="profile.html"
+                        class="active">
+
+                        Profile
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="profile-header">
+
+        <div>
+
+            <i class="fa-solid fa-user-circle"></i>
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your StreetCare account information.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="profile-container">
+
+
+        <!-- PROFILE CARD -->
+
+        <section class="profile-card">
+
+
+            <div class="profile-top">
+
+
+                <div class="profile-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="profileName">
+                        Sajili Chavan
+                    </h2>
+
+                    <p id="profileEmail">
+                        sajili@example.com
+                    </p>
+
+                    <span class="user-badge">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        Citizen
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="profile-divider"></div>
+
+
+            <!-- PROFILE INFORMATION -->
+
+            <div class="profile-information">
+
+
+                <div class="profile-information-item">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong id="displayName">
+                        Sajili Chavan
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-information-item">
+
+                    <span>
+                        Email Address
+                    </span>
+
+                    <strong id="displayEmail">
+                        sajili@example.com
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-information-item">
+
+                    <span>
+                        Phone Number
+                    </span>
+
+                    <strong id="displayPhone">
+                        +91 XXXXX XXXXX
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-information-item">
+
+                    <span>
+                        City
+                    </span>
+
+                    <strong id="displayCity">
+                        Mumbai
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-information-item">
+
+                    <span>
+                        Account Type
+                    </span>
+
+                    <strong>
+                        Citizen
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-information-item">
+
+                    <span>
+                        Member Since
+                    </span>
+
+                    <strong>
+                        2026
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- EDIT PROFILE -->
+
+        <section class="edit-profile-card">
+
+
+            <div class="profile-section-heading">
+
+                <h2>
+                    Edit Profile
+                </h2>
+
+                <p>
+                    Update your personal information.
+                </p>
+
+            </div>
+
+
+            <form id="profileForm">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="editName">
+                        Full Name
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="editName"
+                            value="Sajili Chavan"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="editEmail">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="editEmail"
+                            value="sajili@example.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="editPhone">
+                        Phone Number
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="editPhone"
+                            placeholder="Enter phone number">
+
+                    </div>
+
+                </div>
+
+
+                <!-- CITY -->
+
+                <div class="form-group">
+
+                    <label for="editCity">
+                        City
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <input
+                            type="text"
+                            id="editCity"
+                            value="Mumbai">
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAVE -->
+
+                <button
+                    type="submit"
+                    class="profile-save-btn">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Save Changes
+
+                </button>
+
+
+                <div
+                    id="profileMessage"
+                    class="profile-message">
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+
+        <!-- ACCOUNT ACTIONS -->
+
+        <section class="account-actions">
+
+
+            <div class="profile-section-heading">
+
+                <h2>
+                    Account
+                </h2>
+
+                <p>
+                    Manage your account settings.
+                </p>
+
+            </div>
+
+
+            <div class="account-action-list">
+
+
+                <a
+                    href="myreports.html"
+                    class="account-action">
+
+                    <div>
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                        <span>
+                            My Reports
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="account-action">
+
+                    <div>
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <span>
+                            Contact Support
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="account-action logout-action">
+
+                    <div>
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>
+                            Logout
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <h2>StreetCare</h2>
+
+                <p>
+
+                    StreetCare is a proposed civic reporting
+                    platform for identifying and tracking
+                    street-related infrastructure issues.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">
+                            Report Issue
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="track.html">
+                            Track
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    support@streetcare.in
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Mumbai, Maharashtra, India
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 StreetCare |
+                Street Fault Reporting Automation System.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+
+        const profileForm =
+            document.getElementById("profileForm");
+
+
+        const profileMessage =
+            document.getElementById("profileMessage");
+
+
+        profileForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document
+                    .getElementById("editName")
+                    .value
+                    .trim();
+
+
+                const email =
+                    document
+                    .getElementById("editEmail")
+                    .value
+                    .trim();
+
+
+                const phone =
+                    document
+                    .getElementById("editPhone")
+                    .value
+                    .trim();
+
+
+                const city =
+                    document
+                    .getElementById("editCity")
+                    .value
+                    .trim();
+
+
+                if (name.length < 2) {
+
+                    profileMessage.textContent =
+                        "Please enter a valid name.";
+
+                    return;
+
+                }
+
+
+                if (email.length < 5) {
+
+                    profileMessage.textContent =
+                        "Please enter a valid email.";
+
+                    return;
+
+                }
+
+
+                document
+                    .getElementById("profileName")
+                    .textContent = name;
+
+
+                document
+                    .getElementById("profileEmail")
+                    .textContent = email;
+
+
+                document
+                    .getElementById("displayName")
+                    .textContent = name;
+
+
+                document
+                    .getElementById("displayEmail")
+                    .textContent = email;
+
+
+                document
+                    .getElementById("displayPhone")
+                    .textContent =
+                    phone || "+91 XXXXX XXXXX";
+
+
+                document
+                    .getElementById("displayCity")
+                    .textContent =
+                    city || "Mumbai";
+
+
+                profileMessage.innerHTML = `
+
+                    <div class="profile-success">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Profile updated successfully.
+
+                    </div>
+
+                `;
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>

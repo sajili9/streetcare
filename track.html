@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Complaint | StreetCare</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ===================== NAVBAR ===================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-road"></i>
+
+                <h2>StreetCare</h2>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="report.html">Report Issue</a>
+                </li>
+
+                <li>
+                    <a href="track.html" class="active">Track</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+
+                <li>
+                    <a href="register.html" class="btn">Register</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ===================== PAGE HEADER ===================== -->
+
+    <section class="track-header">
+
+        <div>
+
+            <i class="fa-solid fa-location-crosshairs"></i>
+
+            <h1>Track Your Complaint</h1>
+
+            <p>
+
+                Enter your Complaint ID to check the
+                current status of your reported issue.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== TRACK FORM ===================== -->
+
+    <section class="track-section">
+
+
+        <div class="track-container">
+
+
+            <div class="track-icon">
+
+                <i class="fa-solid fa-magnifying-glass-location"></i>
+
+            </div>
+
+
+            <h2>Check Complaint Status</h2>
+
+            <p>
+
+                Enter the Complaint ID you received
+                after submitting your report.
+
+            </p>
+
+
+            <form id="trackForm">
+
+                <div class="track-input">
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                    <input
+                        type="text"
+                        id="complaintId"
+                        placeholder="Example: SFR123456"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="track-btn"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Track Complaint
+
+                </button>
+
+            </form>
+
+
+            <p id="trackMessage"></p>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== COMPLAINT RESULT ===================== -->
+
+    <section
+        class="complaint-result"
+        id="complaintResult"
+    >
+
+        <div class="result-header">
+
+            <div>
+
+                <span>Complaint ID</span>
+
+                <h2 id="resultComplaintId">
+                    SFR123456
+                </h2>
+
+            </div>
+
+
+            <div
+                class="status-badge"
+                id="resultStatus"
+            >
+
+                In Progress
+
+            </div>
+
+        </div>
+
+
+        <!-- ISSUE INFORMATION -->
+
+        <div class="result-details">
+
+
+            <div class="result-detail">
+
+                <i class="fa-solid fa-list"></i>
+
+                <div>
+
+                    <span>Category</span>
+
+                    <strong id="resultCategory">
+                        Pothole / Damaged Road
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-detail">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+
+                    <span>Location</span>
+
+                    <strong id="resultLocation">
+                        Andheri East, Mumbai
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-detail">
+
+                <i class="fa-solid fa-calendar"></i>
+
+                <div>
+
+                    <span>Reported On</span>
+
+                    <strong id="resultDate">
+                        30 July 2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-detail">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <div>
+
+                    <span>Last Updated</span>
+
+                    <strong id="resultUpdated">
+                        30 July 2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ===================== STATUS TIMELINE ===================== -->
+
+        <div class="status-section">
+
+            <h3>Complaint Progress</h3>
+
+
+            <div class="status-timeline">
+
+
+                <!-- STEP 1 -->
+
+                <div
+                    class="status-step completed"
+                    id="stepSubmitted"
+                >
+
+                    <div class="status-circle">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Submitted</h4>
+
+                        <p>
+                            Complaint received
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div
+                    class="status-step completed"
+                    id="stepReview"
+                >
+
+                    <div class="status-circle">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Under Review</h4>
+
+                        <p>
+                            Complaint is being reviewed
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div
+                    class="status-step active-step"
+                    id="stepProgress"
+                >
+
+                    <div class="status-circle">
+
+                        <i class="fa-solid fa-spinner"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>In Progress</h4>
+
+                        <p>
+                            Action is being taken
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+
+                <div
+                    class="status-step"
+                    id="stepResolved"
+                >
+
+                    <div class="status-circle">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Resolved</h4>
+
+                        <p>
+                            Issue has been resolved
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================== DESCRIPTION ===================== -->
+
+        <div class="result-description">
+
+            <h3>Issue Description</h3>
+
+            <p id="resultDescription">
+
+                Large pothole observed near the main road.
+                It may create difficulty for two-wheelers
+                and other vehicles.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ===================== INFORMATION ===================== -->
+
+    <section class="track-information">
+
+        <div class="section-title">
+
+            <h2>Complaint Status Guide</h2>
+
+            <p>
+
+                Understand what each status means.
+
+            </p>
+
+        </div>
+
+
+        <div class="track-guide">
+
+
+            <div class="guide-card">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                <h3>Submitted</h3>
+
+                <p>
+
+                    Your complaint has been successfully
+                    received by the system.
+
+                </p>
+
+            </div>
+
+
+            <div class="guide-card">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <h3>Under Review</h3>
+
+                <p>
+
+                    The complaint is being checked
+                    and categorized.
+
+                </p>
+
+            </div>
+
+
+            <div class="guide-card">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <h3>In Progress</h3>
+
+                <p>
+
+                    Appropriate action is being
+                    taken for the reported issue.
+
+                </p>
+
+            </div>
+
+
+            <div class="guide-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h3>Resolved</h3>
+
+                <p>
+
+                    The reported issue has been
+                    marked as resolved.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== CTA ===================== -->
+
+    <section class="cta">
+
+        <div class="cta-content">
+
+            <h2>Haven't Reported an Issue Yet?</h2>
+
+            <p>
+
+                Help improve your local area by
+                reporting a street-related problem.
+
+            </p>
+
+            <a
+                href="report.html"
+                class="primary-btn"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Report an Issue
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== FOOTER ===================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <h2>StreetCare</h2>
+
+                <p>
+
+                    StreetCare is a proposed civic reporting
+                    platform for identifying and tracking
+                    street-related infrastructure issues.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">Report Issue</a>
+                    </li>
+
+                    <li>
+                        <a href="track.html">Track</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    support@streetcare.in
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Mumbai, Maharashtra, India
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 StreetCare | Street Fault Reporting Automation System.
+                Developed by Sajili Chavan & Team.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ===================== TRACK JAVASCRIPT ===================== -->
+
+    <script>
+
+
+        /* =====================================
+           TRACK FORM
+        ===================================== */
+
+        const trackForm =
+            document.getElementById("trackForm");
+
+        const complaintResult =
+            document.getElementById("complaintResult");
+
+        const trackMessage =
+            document.getElementById("trackMessage");
+
+
+        trackForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            const complaintId =
+                document
+                    .getElementById("complaintId")
+                    .value
+                    .trim()
+                    .toUpperCase();
+
+
+            /* CHECK ID */
+
+            if (complaintId === "") {
+
+                trackMessage.textContent =
+                    "Please enter your Complaint ID.";
+
+                complaintResult.style.display = "none";
+
+                return;
+
+            }
+
+
+            /*
+                FRONTEND DEMO
+
+                Any ID beginning with SFR
+                will display the sample result.
+
+                Later this will be replaced by:
+
+                Frontend
+                    ↓
+                Node.js API
+                    ↓
+                MongoDB
+                    ↓
+                Real complaint data
+            */
+
+
+            if (!complaintId.startsWith("SFR")) {
+
+                trackMessage.textContent =
+                    "Invalid Complaint ID. Example: SFR123456";
+
+                complaintResult.style.display = "none";
+
+                return;
+
+            }
+
+
+            /* DISPLAY RESULT */
+
+            document.getElementById(
+                "resultComplaintId"
+            ).textContent = complaintId;
+
+
+            complaintResult.style.display = "block";
+
+            trackMessage.textContent =
+                "Complaint found successfully.";
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
