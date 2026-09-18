@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | StreetCare</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ===================== NAVBAR ===================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-road"></i>
+
+                <h2>StreetCare</h2>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="report.html">Report Issue</a>
+                </li>
+
+                <li>
+                    <a href="track.html">Track</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html" class="active">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">Logout</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ===================== DASHBOARD HEADER ===================== -->
+
+    <section class="dashboard-header">
+
+        <div>
+
+            <span class="dashboard-label">
+                CITIZEN DASHBOARD
+            </span>
+
+            <h1>
+                Welcome to StreetCare
+            </h1>
+
+            <p>
+                Monitor your reported street and
+                infrastructure issues from one place.
+            </p>
+
+        </div>
+
+
+        <a
+            href="report.html"
+            class="dashboard-report-btn"
+        >
+
+            <i class="fa-solid fa-plus"></i>
+
+            Report New Issue
+
+        </a>
+
+    </section>
+
+
+    <!-- ===================== DASHBOARD ===================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ===================== STATISTICS ===================== -->
+
+        <section class="dashboard-stats">
+
+
+            <!-- TOTAL -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Total Reports</span>
+
+                    <h2 id="totalReports">08</h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- PENDING -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon pending-icon">
+
+                    <i class="fa-solid fa-hourglass-half"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Pending</span>
+
+                    <h2 id="pendingReports">02</h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon progress-icon">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                </div>
+
+                <div>
+
+                    <span>In Progress</span>
+
+                    <h2 id="progressReports">03</h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESOLVED -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon resolved-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Resolved</span>
+
+                    <h2 id="resolvedReports">03</h2>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ===================== DASHBOARD GRID ===================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- ===================== RECENT REPORTS ===================== -->
+
+            <div class="recent-reports">
+
+                <div class="dashboard-section-heading">
+
+                    <div>
+
+                        <h2>Recent Reports</h2>
+
+                        <p>
+                            Your latest submitted complaints
+                        </p>
+
+                    </div>
+
+                    <a href="track.html">
+                        Track All
+                    </a>
+
+                </div>
+
+
+                <!-- REPORT 1 -->
+
+                <div class="report-row">
+
+                    <div class="report-type-icon">
+
+                        <i class="fa-solid fa-road"></i>
+
+                    </div>
+
+
+                    <div class="report-row-info">
+
+                        <h3>
+                            Pothole / Damaged Road
+                        </h3>
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Andheri East, Mumbai
+
+                        </p>
+
+                        <small>
+                            Complaint ID: SFR238451
+                        </small>
+
+                    </div>
+
+
+                    <span class="status status-progress">
+
+                        In Progress
+
+                    </span>
+
+                </div>
+
+
+                <!-- REPORT 2 -->
+
+                <div class="report-row">
+
+                    <div class="report-type-icon">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+
+                    <div class="report-row-info">
+
+                        <h3>
+                            Street Light
+                        </h3>
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Powai, Mumbai
+
+                        </p>
+
+                        <small>
+                            Complaint ID: SFR417826
+                        </small>
+
+                    </div>
+
+
+                    <span class="status status-pending">
+
+                        Pending
+
+                    </span>
+
+                </div>
+
+
+                <!-- REPORT 3 -->
+
+                <div class="report-row">
+
+                    <div class="report-type-icon">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </div>
+
+
+                    <div class="report-row-info">
+
+                        <h3>
+                            Garbage / Waste
+                        </h3>
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Borivali West, Mumbai
+
+                        </p>
+
+                        <small>
+                            Complaint ID: SFR583921
+                        </small>
+
+                    </div>
+
+
+                    <span class="status status-resolved">
+
+                        Resolved
+
+                    </span>
+
+                </div>
+
+
+                <!-- REPORT 4 -->
+
+                <div class="report-row">
+
+                    <div class="report-type-icon">
+
+                        <i class="fa-solid fa-water"></i>
+
+                    </div>
+
+
+                    <div class="report-row-info">
+
+                        <h3>
+                            Waterlogging
+                        </h3>
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Kurla, Mumbai
+
+                        </p>
+
+                        <small>
+                            Complaint ID: SFR691245
+                        </small>
+
+                    </div>
+
+
+                    <span class="status status-progress">
+
+                        In Progress
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ===================== QUICK ACTIONS ===================== -->
+
+            <div class="quick-actions">
+
+                <div class="dashboard-section-heading">
+
+                    <div>
+
+                        <h2>Quick Actions</h2>
+
+                        <p>
+                            Manage your reports
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="report.html"
+                    class="quick-action"
+                >
+
+                    <div>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <span>
+                        Report New Issue
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a
+                    href="track.html"
+                    class="quick-action"
+                >
+
+                    <div>
+
+                        <i class="fa-solid fa-location-crosshairs"></i>
+
+                    </div>
+
+                    <span>
+                        Track Complaint
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="quick-action"
+                >
+
+                    <div>
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <span>
+                        Contact Support
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="quick-action"
+                >
+
+                    <div>
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ===================== REPORT SUMMARY ===================== -->
+
+        <section class="dashboard-summary">
+
+
+            <div class="summary-heading">
+
+                <div>
+
+                    <h2>Report Overview</h2>
+
+                    <p>
+                        Summary of your complaint activity
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-content">
+
+
+                <div class="summary-chart">
+
+
+                    <div class="progress-circle">
+
+                        <div class="progress-circle-inner">
+
+                            <strong>08</strong>
+
+                            <span>Total</span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="summary-details">
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-dot pending-dot"></span>
+
+                        <div>
+
+                            <strong>Pending</strong>
+
+                            <p>
+                                2 complaints awaiting review
+                            </p>
+
+                        </div>
+
+                        <b>25%</b>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-dot progress-dot"></span>
+
+                        <div>
+
+                            <strong>In Progress</strong>
+
+                            <p>
+                                3 complaints being handled
+                            </p>
+
+                        </div>
+
+                        <b>37.5%</b>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-dot resolved-dot"></span>
+
+                        <div>
+
+                            <strong>Resolved</strong>
+
+                            <p>
+                                3 complaints completed
+                            </p>
+
+                        </div>
+
+                        <b>37.5%</b>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ===================== FOOTER ===================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <h2>StreetCare</h2>
+
+                <p>
+
+                    StreetCare is a proposed civic reporting
+                    platform for identifying and tracking
+                    street-related infrastructure issues.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">Report Issue</a>
+                    </li>
+
+                    <li>
+                        <a href="track.html">Track</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    support@streetcare.in
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Mumbai, Maharashtra, India
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 StreetCare | Street Fault Reporting
+                Automation System.
+                Developed by Sajili Chavan & Team.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+
+    <script>
+
+        /*
+        ==========================================
+        DASHBOARD DEMO DATA
+        ==========================================
+
+        These numbers are temporary.
+
+        Later they will come from:
+
+        MongoDB
+             ↓
+        Node.js / Express
+             ↓
+        Dashboard API
+             ↓
+        This page
+        */
+
+
+        const dashboardData = {
+
+            total: 8,
+
+            pending: 2,
+
+            progress: 3,
+
+            resolved: 3
+
+        };
+
+
+        /* DISPLAY STATISTICS */
+
+        document.getElementById("totalReports")
+            .textContent = dashboardData.total;
+
+
+        document.getElementById("pendingReports")
+            .textContent = dashboardData.pending;
+
+
+        document.getElementById("progressReports")
+            .textContent = dashboardData.progress;
+
+
+        document.getElementById("resolvedReports")
+            .textContent = dashboardData.resolved;
+
+
+    </script>
+
+
+</body>
+
+</html>

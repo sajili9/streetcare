@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>StreetCare Admin Dashboard</title>
+
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+
+    body {
+        background: #f4f7f6;
+        color: #222;
+    }
+
+
+    /* NAVBAR */
+
+    nav {
+        background: #0b6b50;
+        padding: 18px 7%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .logo {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        background: linear-gradient(
+            135deg,
+            #0b6b50,
+            #15956f
+        );
+
+        color: white;
+
+        padding: 45px 7%;
+    }
+
+
+    .header h1 {
+        font-size: 35px;
+        margin-bottom: 8px;
+    }
+
+
+    .header p {
+        opacity: 0.9;
+    }
+
+
+    /* CONTAINER */
+
+    .container {
+        width: 92%;
+        max-width: 1300px;
+        margin: 35px auto;
+    }
+
+
+    /* STATISTICS */
+
+    .stats {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .stat-card {
+        background: white;
+
+        padding: 25px;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 4px 15px
+            rgba(0, 0, 0, 0.07);
+    }
+
+
+    .stat-card h3 {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+
+    .stat-card p {
+        font-size: 30px;
+        font-weight: bold;
+        color: #0b6b50;
+    }
+
+
+    /* REPORT CARD */
+
+    .reports-card {
+        background: white;
+
+        border-radius: 12px;
+
+        padding: 25px;
+
+        box-shadow:
+            0 4px 15px
+            rgba(0, 0, 0, 0.07);
+    }
+
+
+    .reports-card h2 {
+        color: #0b6b50;
+        margin-bottom: 20px;
+    }
+
+
+    /* TABLE */
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 900px;
+    }
+
+
+    th {
+        background: #0b6b50;
+        color: white;
+
+        padding: 13px;
+
+        text-align: left;
+    }
+
+
+    td {
+        padding: 13px;
+
+        border-bottom:
+            1px solid #ddd;
+    }
+
+
+    tr:hover {
+        background: #f5f5f5;
+    }
+
+
+    /* STATUS SELECT */
+
+    .status-select {
+
+        padding: 8px 12px;
+
+        border-radius: 6px;
+
+        border: 1px solid #ccc;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        background: white;
+    }
+
+
+    .status-select.pending {
+
+        border-color: #d6a600;
+
+        color: #8a6500;
+
+        background: #fff8df;
+    }
+
+
+    .status-select.progress {
+
+        border-color: #287ac7;
+
+        color: #0759a5;
+
+        background: #e8f3ff;
+    }
+
+
+    .status-select.resolved {
+
+        border-color: #15956f;
+
+        color: #087443;
+
+        background: #e5f8ef;
+    }
+
+
+    /* MESSAGE */
+
+    #loading {
+
+        text-align: center;
+
+        padding: 30px;
+
+        color: #666;
+    }
+
+
+    #error {
+
+        background: #ffe0e0;
+
+        color: #b00020;
+
+        padding: 15px;
+
+        border-radius: 8px;
+
+        display: none;
+
+        margin-bottom: 20px;
+    }
+
+
+    #success {
+
+        background: #d9f5e9;
+
+        color: #087443;
+
+        padding: 15px;
+
+        border-radius: 8px;
+
+        display: none;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+        .stats {
+
+            grid-template-columns: 1fr;
+
+        }
+
+
+        nav {
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+
+        nav a {
+
+            margin: 0 8px;
+
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+```
+<div class="logo">
+
+    StreetCare
+
+</div>
+
+
+<div>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="report.html">
+        Report
+    </a>
+
+</div>
+```
+
+</nav>
+
+<!-- HEADER -->
+
+<section class="header">
+
+```
+<h1>
+    Admin Dashboard
+</h1>
+
+<p>
+    Monitor and manage citizen street problem reports.
+</p>
+```
+
+</section>
+
+<!-- MAIN -->
+
+<div class="container">
+
+```
+<!-- STATISTICS -->
+
+<div class="stats">
+
+
+    <div class="stat-card">
+
+        <h3>
+            Total Reports
+        </h3>
+
+        <p id="totalReports">
+            0
+        </p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>
+            Pending
+        </h3>
+
+        <p id="pendingReports">
+            0
+        </p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>
+            Resolved
+        </h3>
+
+        <p id="resolvedReports">
+            0
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- MESSAGES -->
+
+<div id="error"></div>
+
+<div id="success"></div>
+
+
+
+<!-- REPORTS -->
+
+<div class="reports-card">
+
+
+    <h2>
+        Submitted Reports
+    </h2>
+
+
+    <div id="loading">
+
+        Loading reports...
+
+    </div>
+
+
+    <div class="table-container">
+
+
+        <table id="reportsTable"
+               style="display:none;">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Reference ID
+                    </th>
+
+                    <th>
+                        Name
+                    </th>
+
+                    <th>
+                        Issue
+                    </th>
+
+                    <th>
+                        Location
+                    </th>
+
+                    <th>
+                        Description
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="reportsBody">
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<script>
+
+
+const API_URL =
+    "http://localhost:5000/api/reports";
+
+
+
+// =====================================================
+// Load reports
+// =====================================================
+
+async function loadReports() {
+
+
+    try {
+
+
+        const response =
+            await fetch(API_URL);
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Server returned " +
+                response.status
+            );
+
+        }
+
+
+        const reports =
+            await response.json();
+
+
+        console.log(
+            "Reports received:",
+            reports
+        );
+
+
+        updateStatistics(reports);
+
+        displayReports(reports);
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(error);
+
+
+        document.getElementById(
+            "loading"
+        ).style.display = "none";
+
+
+        const errorBox =
+            document.getElementById(
+                "error"
+            );
+
+
+        errorBox.textContent =
+            "Unable to connect to StreetCare backend. Make sure the server is running.";
+
+
+        errorBox.style.display =
+            "block";
+
+    }
+
+}
+
+
+
+// =====================================================
+// Update statistics
+// =====================================================
+
+function updateStatistics(reports) {
+
+
+    document.getElementById(
+        "totalReports"
+    ).textContent =
+        reports.length;
+
+
+    const pending =
+        reports.filter(
+            report =>
+                !report.status ||
+                report.status === "Pending"
+        ).length;
+
+
+    const resolved =
+        reports.filter(
+            report =>
+                report.status === "Resolved"
+        ).length;
+
+
+    document.getElementById(
+        "pendingReports"
+    ).textContent =
+        pending;
+
+
+    document.getElementById(
+        "resolvedReports"
+    ).textContent =
+        resolved;
+
+}
+
+
+
+// =====================================================
+// Display reports
+// =====================================================
+
+function displayReports(reports) {
+
+
+    const table =
+        document.getElementById(
+            "reportsTable"
+        );
+
+
+    const body =
+        document.getElementById(
+            "reportsBody"
+        );
+
+
+    const loading =
+        document.getElementById(
+            "loading"
+        );
+
+
+    body.innerHTML = "";
+
+
+    if (reports.length === 0) {
+
+        loading.textContent =
+            "No reports submitted yet.";
+
+        return;
+
+    }
+
+
+    loading.style.display =
+        "none";
+
+
+    table.style.display =
+        "table";
+
+
+    reports.forEach(report => {
+
+
+        const row =
+            document.createElement("tr");
+
+
+        const status =
+            report.status ||
+            "Pending";
+
+
+        let statusClass =
+            "pending";
+
+
+        if (
+            status ===
+            "In Progress"
+        ) {
+
+            statusClass =
+                "progress";
+
+        }
+
+
+        if (
+            status ===
+            "Resolved"
+        ) {
+
+            statusClass =
+                "resolved";
+
+        }
+
+
+        row.innerHTML = `
+
+            <td>
+                ${report._id || "N/A"}
+            </td>
+
+            <td>
+                ${report.name || "N/A"}
+            </td>
+
+            <td>
+                ${report.issueType || "N/A"}
+            </td>
+
+            <td>
+                ${report.location || "N/A"}
+            </td>
+
+            <td>
+                ${report.description || "N/A"}
+            </td>
+
+            <td>
+
+                <select
+                    class="status-select ${statusClass}"
+                    data-id="${report._id}"
+                    onchange="updateStatus(
+                        '${report._id}',
+                        this.value,
+                        this
+                    )"
+                >
+
+                    <option
+                        value="Pending"
+                        ${status === "Pending"
+                            ? "selected"
+                            : ""}
+                    >
+                        Pending
+                    </option>
+
+
+                    <option
+                        value="In Progress"
+                        ${status === "In Progress"
+                            ? "selected"
+                            : ""}
+                    >
+                        In Progress
+                    </option>
+
+
+                    <option
+                        value="Resolved"
+                        ${status === "Resolved"
+                            ? "selected"
+                            : ""}
+                    >
+                        Resolved
+                    </option>
+
+                </select>
+
+            </td>
+
+        `;
+
+
+        body.appendChild(row);
+
+    });
+
+}
+
+
+
+// =====================================================
+// Update status
+// =====================================================
+
+async function updateStatus(
+    reportId,
+    newStatus,
+    selectElement
+) {
+
+
+    console.log(
+        "Updating:",
+        reportId,
+        newStatus
+    );
+
+
+    try {
+
+
+        selectElement.disabled =
+            true;
+
+
+        const response =
+            await fetch(
+
+                `${API_URL}/${reportId}/status`,
+
+                {
+
+                    method: "PATCH",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            status:
+                                newStatus
+
+                        })
+
+                }
+
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "Update response:",
+            data
+        );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Failed to update status"
+            );
+
+        }
+
+
+        // Change dropdown style
+
+        selectElement.classList.remove(
+            "pending",
+            "progress",
+            "resolved"
+        );
+
+
+        if (
+            newStatus ===
+            "Pending"
+        ) {
+
+            selectElement.classList.add(
+                "pending"
+            );
+
+        }
+
+
+        else if (
+            newStatus ===
+            "In Progress"
+        ) {
+
+            selectElement.classList.add(
+                "progress"
+            );
+
+        }
+
+
+        else if (
+            newStatus ===
+            "Resolved"
+        ) {
+
+            selectElement.classList.add(
+                "resolved"
+            );
+
+        }
+
+
+        showSuccess(
+            "Report status updated successfully!"
+        );
+
+
+        // Reload dashboard statistics
+
+        loadReports();
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(error);
+
+
+        showError(
+            "Unable to update report status."
+        );
+
+    }
+
+
+    finally {
+
+        selectElement.disabled =
+            false;
+
+    }
+
+}
+
+
+
+// =====================================================
+// Success message
+// =====================================================
+
+function showSuccess(message) {
+
+
+    const box =
+        document.getElementById(
+            "success"
+        );
+
+
+    box.textContent =
+        message;
+
+
+    box.style.display =
+        "block";
+
+
+    setTimeout(() => {
+
+        box.style.display =
+            "none";
+
+    }, 3000);
+
+}
+
+
+
+// =====================================================
+// Error message
+// =====================================================
+
+function showError(message) {
+
+
+    const box =
+        document.getElementById(
+            "error"
+        );
+
+
+    box.textContent =
+        message;
+
+
+    box.style.display =
+        "block";
+
+
+    setTimeout(() => {
+
+        box.style.display =
+            "none";
+
+    }, 4000);
+
+}
+
+
+
+// =====================================================
+// Start dashboard
+// =====================================================
+
+loadReports();
+
+
+</script>
+
+</body>
+
+</html>

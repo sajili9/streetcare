@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Reports | StreetCare</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-road"></i>
+
+                <h2>StreetCare</h2>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="report.html">
+                        Report Issue
+                    </a>
+                </li>
+
+                <li>
+                    <a href="track.html">
+                        Track
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        Profile
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="reports-header">
+
+        <div>
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <h1>My Reports</h1>
+
+            <p>
+                View and track all your submitted street issue reports.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="reports-container">
+
+
+        <!-- ================= TOP SECTION ================= -->
+
+        <div class="reports-top">
+
+
+            <div>
+
+                <h2>
+                    Submitted Reports
+                </h2>
+
+                <p>
+                    Keep track of your reported civic issues.
+                </p>
+
+            </div>
+
+
+            <a
+                href="report.html"
+                class="new-report-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                New Report
+
+            </a>
+
+
+        </div>
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <section class="reports-filters">
+
+
+            <div class="search-report">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="reportSearch"
+                    placeholder="Search by complaint ID or location...">
+
+            </div>
+
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="pending">
+                    Pending
+                </option>
+
+                <option value="progress">
+                    In Progress
+                </option>
+
+                <option value="resolved">
+                    Resolved
+                </option>
+
+            </select>
+
+
+        </section>
+
+
+        <!-- ================= REPORTS TABLE ================= -->
+
+        <section class="reports-table-container">
+
+
+            <div class="table-wrapper">
+
+                <table id="reportsTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Complaint ID
+                            </th>
+
+                            <th>
+                                Issue
+                            </th>
+
+                            <th>
+                                Location
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- REPORT 1 -->
+
+                        <tr
+                            data-status="progress"
+                            data-search="SFR238451 pothole andheri east">
+
+                            <td>
+
+                                <strong>
+                                    SFR238451
+                                </strong>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-issue">
+
+                                    <span class="table-icon">
+
+                                        <i class="fa-solid fa-road"></i>
+
+                                    </span>
+
+                                    <span>
+                                        Pothole / Damaged Road
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Andheri East, Mumbai
+
+                            </td>
+
+
+                            <td>
+                                24 Jul 2026
+                            </td>
+
+
+                            <td>
+
+                                <span
+                                    class="status status-progress">
+
+                                    In Progress
+
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-report-btn"
+                                    onclick="viewReport('SFR238451')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- REPORT 2 -->
+
+                        <tr
+                            data-status="pending"
+                            data-search="SFR417826 street light powai">
+
+                            <td>
+
+                                <strong>
+                                    SFR417826
+                                </strong>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-issue">
+
+                                    <span class="table-icon">
+
+                                        <i class="fa-solid fa-lightbulb"></i>
+
+                                    </span>
+
+                                    <span>
+                                        Street Light
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Powai, Mumbai
+
+                            </td>
+
+
+                            <td>
+                                22 Jul 2026
+                            </td>
+
+
+                            <td>
+
+                                <span
+                                    class="status status-pending">
+
+                                    Pending
+
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-report-btn"
+                                    onclick="viewReport('SFR417826')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- REPORT 3 -->
+
+                        <tr
+                            data-status="resolved"
+                            data-search="SFR583921 garbage borivali">
+
+                            <td>
+
+                                <strong>
+                                    SFR583921
+                                </strong>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-issue">
+
+                                    <span class="table-icon">
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </span>
+
+                                    <span>
+                                        Garbage / Waste
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Borivali West, Mumbai
+
+                            </td>
+
+
+                            <td>
+                                18 Jul 2026
+                            </td>
+
+
+                            <td>
+
+                                <span
+                                    class="status status-resolved">
+
+                                    Resolved
+
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-report-btn"
+                                    onclick="viewReport('SFR583921')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- REPORT 4 -->
+
+                        <tr
+                            data-status="progress"
+                            data-search="SFR691245 waterlogging kurla">
+
+                            <td>
+
+                                <strong>
+                                    SFR691245
+                                </strong>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-issue">
+
+                                    <span class="table-icon">
+
+                                        <i class="fa-solid fa-water"></i>
+
+                                    </span>
+
+                                    <span>
+                                        Waterlogging
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Kurla, Mumbai
+
+                            </td>
+
+
+                            <td>
+                                15 Jul 2026
+                            </td>
+
+
+                            <td>
+
+                                <span
+                                    class="status status-progress">
+
+                                    In Progress
+
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-report-btn"
+                                    onclick="viewReport('SFR691245')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- EMPTY MESSAGE -->
+
+            <div
+                id="noReports"
+                class="no-reports">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <h3>
+                    No reports found
+                </h3>
+
+                <p>
+                    Try changing your search or filter.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= INFORMATION ================= -->
+
+        <section class="report-info-box">
+
+
+            <div class="report-info-icon">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    How complaint tracking works
+                </h3>
+
+                <p>
+
+                    Your complaint moves through different
+                    stages after submission:
+
+                </p>
+
+
+                <div class="tracking-steps">
+
+
+                    <div class="tracking-step">
+
+                        <span>
+                            1
+                        </span>
+
+                        <strong>
+                            Submitted
+                        </strong>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+
+                    <div class="tracking-step">
+
+                        <span>
+                            2
+                        </span>
+
+                        <strong>
+                            Reviewed
+                        </strong>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+
+                    <div class="tracking-step">
+
+                        <span>
+                            3
+                        </span>
+
+                        <strong>
+                            In Progress
+                        </strong>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+
+                    <div class="tracking-step">
+
+                        <span>
+                            4
+                        </span>
+
+                        <strong>
+                            Resolved
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <h2>
+                    StreetCare
+                </h2>
+
+                <p>
+
+                    StreetCare is a proposed civic reporting
+                    platform for identifying and tracking
+                    street-related infrastructure issues.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">
+                            Report Issue
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="track.html">
+                            Track
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    support@streetcare.in
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Mumbai, Maharashtra, India
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 StreetCare |
+                Street Fault Reporting Automation System.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+
+        /* ==========================================
+           SEARCH + FILTER
+        ========================================== */
+
+        const searchInput =
+            document.getElementById("reportSearch");
+
+
+        const statusFilter =
+            document.getElementById("statusFilter");
+
+
+        const tableRows =
+            document.querySelectorAll(
+                "#reportsTable tbody tr"
+            );
+
+
+        const noReports =
+            document.getElementById("noReports");
+
+
+        function filterReports() {
+
+
+            const searchText =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const selectedStatus =
+                statusFilter.value;
+
+
+            let visibleCount = 0;
+
+
+            tableRows.forEach(function(row) {
+
+
+                const rowSearch =
+                    row.dataset.search
+                        .toLowerCase();
+
+
+                const rowStatus =
+                    row.dataset.status;
+
+
+                const matchesSearch =
+                    rowSearch.includes(searchText);
+
+
+                const matchesStatus =
+                    selectedStatus === "all" ||
+                    rowStatus === selectedStatus;
+
+
+                if (
+                    matchesSearch &&
+                    matchesStatus
+                ) {
+
+                    row.style.display = "";
+
+                    visibleCount++;
+
+                } else {
+
+                    row.style.display = "none";
+
+                }
+
+            });
+
+
+            if (visibleCount === 0) {
+
+                noReports.style.display = "block";
+
+            } else {
+
+                noReports.style.display = "none";
+
+            }
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            filterReports
+        );
+
+
+        statusFilter.addEventListener(
+            "change",
+            filterReports
+        );
+
+
+        /* ==========================================
+           VIEW REPORT
+        ========================================== */
+
+        function viewReport(complaintId) {
+
+            window.location.href =
+                "track.html?id=" + complaintId;
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

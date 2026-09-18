@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | StreetCare</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ===================== NAVBAR ===================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-road"></i>
+
+                <h2>StreetCare</h2>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="report.html">Report Issue</a>
+                </li>
+
+                <li>
+                    <a href="track.html">Track</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+
+                <li>
+                    <a href="register.html" class="btn active">Register</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ===================== REGISTER SECTION ===================== -->
+
+    <section class="login-section">
+
+        <div class="login-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="login-info">
+
+                <i class="fa-solid fa-user-plus login-icon"></i>
+
+                <h1>Join StreetCare</h1>
+
+                <p>
+
+                    Create your account and become part of
+                    a smarter and more responsible community.
+
+                </p>
+
+
+                <div class="login-features">
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Report civic issues easily
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Upload issue photographs
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Track complaint status
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Manage your reports
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="login-box">
+
+
+                <div class="login-heading">
+
+                    <h2>Create Account</h2>
+
+                    <p>
+
+                        Register to start using StreetCare
+
+                    </p>
+
+                </div>
+
+
+                <!-- ===================== REGISTER FORM ===================== -->
+
+                <form id="registerForm">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+
+                            Full Name
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+
+                            Email Address
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MOBILE -->
+
+                    <div class="form-group">
+
+                        <label for="mobile">
+
+                            Mobile Number
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="mobile"
+                                name="mobile"
+                                placeholder="Enter 10-digit mobile number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+
+                            Password
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                name="password"
+                                placeholder="Create a password"
+                                required
+                            >
+
+                            <i
+                                class="fa-solid fa-eye password-toggle"
+                                id="toggleRegisterPassword">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+
+                            Confirm Password
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                required
+                            >
+
+                            <i
+                                class="fa-solid fa-eye password-toggle"
+                                id="toggleConfirmPassword">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="register-terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- REGISTER BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-submit"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Create Account
+
+                    </button>
+
+
+                    <!-- MESSAGE -->
+
+                    <p
+                        id="registerMessage"
+                        class="login-message">
+                    </p>
+
+
+                </form>
+
+
+                <!-- LOGIN LINK -->
+
+                <div class="register-link">
+
+                    <p>
+
+                        Already have an account?
+
+                        <a href="login.html">
+
+                            Login here
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== FOOTER ===================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <h2>StreetCare</h2>
+
+                <p>
+
+                    StreetCare is a proposed civic reporting
+                    platform for identifying and tracking
+                    street-related infrastructure issues.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">Report Issue</a>
+                    </li>
+
+                    <li>
+                        <a href="track.html">Track</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    support@streetcare.in
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Mumbai, Maharashtra, India
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+
+                        <i class="fab fa-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="fab fa-linkedin"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="fab fa-github"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 StreetCare | Street Fault Reporting Automation System.
+                Developed by Sajili Chavan & Team.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ===================== REGISTER JAVASCRIPT ===================== -->
+
+    <script>
+
+
+        /* =====================================
+           SHOW / HIDE PASSWORD
+        ===================================== */
+
+
+        const toggleRegisterPassword =
+            document.getElementById("toggleRegisterPassword");
+
+        const registerPassword =
+            document.getElementById("registerPassword");
+
+
+        toggleRegisterPassword.addEventListener("click", function () {
+
+            if (registerPassword.type === "password") {
+
+                registerPassword.type = "text";
+
+                this.classList.remove("fa-eye");
+
+                this.classList.add("fa-eye-slash");
+
+            }
+
+            else {
+
+                registerPassword.type = "password";
+
+                this.classList.remove("fa-eye-slash");
+
+                this.classList.add("fa-eye");
+
+            }
+
+        });
+
+
+
+        /* =====================================
+           CONFIRM PASSWORD TOGGLE
+        ===================================== */
+
+
+        const toggleConfirmPassword =
+            document.getElementById("toggleConfirmPassword");
+
+        const confirmPassword =
+            document.getElementById("confirmPassword");
+
+
+        toggleConfirmPassword.addEventListener("click", function () {
+
+            if (confirmPassword.type === "password") {
+
+                confirmPassword.type = "text";
+
+                this.classList.remove("fa-eye");
+
+                this.classList.add("fa-eye-slash");
+
+            }
+
+            else {
+
+                confirmPassword.type = "password";
+
+                this.classList.remove("fa-eye-slash");
+
+                this.classList.add("fa-eye");
+
+            }
+
+        });
+
+
+
+        /* =====================================
+           REGISTER FORM VALIDATION
+        ===================================== */
+
+
+        const registerForm =
+            document.getElementById("registerForm");
+
+        const registerMessage =
+            document.getElementById("registerMessage");
+
+
+        registerForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("registerEmail").value.trim();
+
+            const mobile =
+                document.getElementById("mobile").value.trim();
+
+            const password =
+                document.getElementById("registerPassword").value;
+
+            const confirm =
+                document.getElementById("confirmPassword").value;
+
+            const terms =
+                document.getElementById("terms").checked;
+
+
+
+            /* NAME VALIDATION */
+
+            if (name.length < 3) {
+
+                registerMessage.textContent =
+                    "Please enter your full name.";
+
+                return;
+
+            }
+
+
+
+            /* MOBILE VALIDATION */
+
+            if (!/^[0-9]{10}$/.test(mobile)) {
+
+                registerMessage.textContent =
+                    "Please enter a valid 10-digit mobile number.";
+
+                return;
+
+            }
+
+
+
+            /* PASSWORD VALIDATION */
+
+            if (password.length < 6) {
+
+                registerMessage.textContent =
+                    "Password must contain at least 6 characters.";
+
+                return;
+
+            }
+
+
+
+            /* CONFIRM PASSWORD */
+
+            if (password !== confirm) {
+
+                registerMessage.textContent =
+                    "Passwords do not match.";
+
+                return;
+
+            }
+
+
+
+            /* TERMS */
+
+            if (!terms) {
+
+                registerMessage.textContent =
+                    "Please accept the Terms & Conditions.";
+
+                return;
+
+            }
+
+
+
+            /* SUCCESS */
+
+            registerMessage.textContent =
+                "Registration form submitted successfully.";
+
+
+            /*
+                IMPORTANT:
+
+                This is currently FRONTEND ONLY.
+
+                Later we will connect this form
+                to the Node.js backend and MongoDB.
+
+                Then user information will actually
+                be stored in the database.
+            */
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>StreetCare Admin Login</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(
+            135deg,
+            #0b6b50,
+            #15956f
+        );
+    }
+
+    .login-card {
+        width: 90%;
+        max-width: 420px;
+
+        background: white;
+
+        padding: 40px;
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 10px 35px
+            rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        text-align: center;
+
+        color: #0b6b50;
+
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        text-align: center;
+
+        color: #777;
+
+        margin-bottom: 30px;
+    }
+
+    label {
+        display: block;
+
+        font-weight: bold;
+
+        margin-bottom: 7px;
+    }
+
+    input {
+        width: 100%;
+
+        padding: 13px;
+
+        margin-bottom: 20px;
+
+        border: 1px solid #ccc;
+
+        border-radius: 7px;
+
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+
+        padding: 13px;
+
+        border: none;
+
+        border-radius: 7px;
+
+        background: #0b6b50;
+
+        color: white;
+
+        font-size: 16px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #08533f;
+    }
+
+    #error {
+        display: none;
+
+        margin-top: 15px;
+
+        padding: 12px;
+
+        border-radius: 7px;
+
+        background: #ffe1e1;
+
+        color: #b00020;
+
+        text-align: center;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="login-card">
+
+```
+<h1>StreetCare</h1>
+
+<p class="subtitle">
+    Admin Dashboard Login
+</p>
+
+
+<form id="loginForm">
+
+
+    <label>
+        Admin Email
+    </label>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter admin email"
+        required
+    >
+
+
+    <label>
+        Password
+    </label>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        required
+    >
+
+
+    <button type="submit">
+        Login
+    </button>
+
+
+</form>
+
+
+<div id="error"></div>
+```
+
+</div>
+
+<script>
+
+document
+    .getElementById("loginForm")
+    .addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const password =
+            document.getElementById("password").value;
+
+
+        try {
+
+            const response = await fetch(
+                "http://localhost:5000/api/admin/login",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                }
+            );
+
+
+            const data = await response.json();
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.message || "Login failed"
+                );
+
+            }
+
+
+            localStorage.setItem(
+                "streetcareAdmin",
+                "true"
+            );
+
+
+            window.location.href =
+                "admin.html";
+
+
+        } catch (error) {
+
+            const errorBox =
+                document.getElementById("error");
+
+            errorBox.textContent =
+                error.message;
+
+            errorBox.style.display =
+                "block";
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>
+
